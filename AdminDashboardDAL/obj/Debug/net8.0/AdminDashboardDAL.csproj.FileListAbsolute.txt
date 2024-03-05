@@ -1,0 +1,14 @@
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\bin\Debug\net8.0\AdminDashboardDAL.deps.json
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\bin\Debug\net8.0\AdminDashboardDAL.runtimeconfig.json
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\bin\Debug\net8.0\AdminDashboardDAL.dll
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\bin\Debug\net8.0\AdminDashboardDAL.pdb
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\AdminDashboardDAL.csproj.AssemblyReference.cache
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\AdminDashboardDAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\AdminDashboardDAL.AssemblyInfoInputs.cache
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\AdminDashboardDAL.AssemblyInfo.cs
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\AdminDashboardDAL.csproj.CoreCompileInputs.cache
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\AdminDashboardDAL.dll
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\refint\AdminDashboardDAL.dll
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\AdminDashboardDAL.pdb
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\AdminDashboardDAL.genruntimeconfig.cache
+D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\New folder\AdminDashboard\AdminDashboardDAL\obj\Debug\net8.0\ref\AdminDashboardDAL.dll

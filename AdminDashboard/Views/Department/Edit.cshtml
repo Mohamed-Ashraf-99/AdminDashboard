@@ -1,0 +1,38 @@
+﻿@model DepartmentVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+
+<div class="block-header">
+    <h2>Edit Department</h2>
+</div>
+
+<form asp-controller="Department" asp-action="Edit" class="form-group">
+
+    <input type="hidden" class="form-control" asp-for="Id" />
+
+
+    <label asp-for="Name">Department Name</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="danger"></span>
+    <br />
+
+    <label asp-for="Code">Department Code</label>
+    <input type="text" class="form-control" asp-for="Code" value="@Model.Code" />
+    <span asp-validation-for="Code" class="danger"></span>
+    <br />
+
+    <center>
+        <input type="submit" value="Update" class="btn btn-primary" />
+        <a asp-action="Index" asp-controller="Department" class="btn btn-danger">Cancel</a>
+    </center>
+
+</form>
+
+@section JqueryValidation {
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

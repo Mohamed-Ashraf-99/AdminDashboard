@@ -1,0 +1,21 @@
+﻿@model DepartmentVM
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+
+<div class="block-header">
+    <h2>Details for @Model.Name Department</h2>
+</div>
+
+<label asp-for="Name">Department Name</label>
+<input type="text" class="form-control" asp-for="Name" readonly/>
+<br />
+
+<label asp-for="Code">Department Code</label>
+<input type="text" class="form-control" asp-for="Code" value="@Model.Code" readonly/>
+<br />
+
+<a asp-action="Index" asp-controller="Department" class="btn btn-danger">Return</a>
+<a asp-action="Edit" asp-controller="Department" asp-route-id="@Model.Id" class="btn btn-danger">Update</a>
+<a asp-action="Delete" asp-controller="Department" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
