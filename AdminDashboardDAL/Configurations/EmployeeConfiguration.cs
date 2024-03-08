@@ -30,6 +30,10 @@ namespace AdminDashboardDAL.Configurations
             builder.Property(e => e.Phone)
                .HasMaxLength(50);
 
+
+            builder.Property(e => e.Address)
+               .HasMaxLength(100);
+
             builder.Property(e => e.CreationDate)
                 .HasDefaultValueSql("GETDATE()");
 

@@ -1,10 +1,8 @@
 using AdminDashboardBLL.Feature.Interface;
 using AdminDashboardBLL.Feature.Repository;
 using AdminDashboardDAL.Context;
-using AdminDashboardBLL.Feature.Interface;
-using AdminDashboardBLL.Feature.Repository;
+
 using DashboardBLL.Mapping;
-using AdminDashboardDAL.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace DashboardPL

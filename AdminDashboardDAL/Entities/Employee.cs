@@ -21,6 +21,8 @@ namespace AdminDashboardDAL.Entities
 
         public string? Phone { get; set; }
 
+        public string? Address { get; set; }
+
         public string? Notes { get; set; }
 
         public DateTime HireDate { get; set; } 
