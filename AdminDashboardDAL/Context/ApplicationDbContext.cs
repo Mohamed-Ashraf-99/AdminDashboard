@@ -1,4 +1,5 @@
-﻿using AdminDashboardDAL.Entities;
+﻿using AdminDashboardDAL.Configurations;
+using AdminDashboardDAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,14 @@ namespace AdminDashboardDAL.Context
             
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+        }
+
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 } 

@@ -4090,11 +4090,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\1-Programming\\12-Dot-Net-MVC\\1-AdminDashboard\\New folder\\AdminDashboard\\AdminDashboardDAL\\AdminDashboardDAL.csproj",
+      "projectUniqueName": "D:\\1-Programming\\12-Dot-Net-MVC\\1-AdminDashboard\\GitHub\\AdminDashboard\\AdminDashboardDAL\\AdminDashboardDAL.csproj",
       "projectName": "AdminDashboardDAL",
-      "projectPath": "D:\\1-Programming\\12-Dot-Net-MVC\\1-AdminDashboard\\New folder\\AdminDashboard\\AdminDashboardDAL\\AdminDashboardDAL.csproj",
+      "projectPath": "D:\\1-Programming\\12-Dot-Net-MVC\\1-AdminDashboard\\GitHub\\AdminDashboard\\AdminDashboardDAL\\AdminDashboardDAL.csproj",
       "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-      "outputPath": "D:\\1-Programming\\12-Dot-Net-MVC\\1-AdminDashboard\\New folder\\AdminDashboard\\AdminDashboardDAL\\obj\\",
+      "outputPath": "D:\\1-Programming\\12-Dot-Net-MVC\\1-AdminDashboard\\GitHub\\AdminDashboard\\AdminDashboardDAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

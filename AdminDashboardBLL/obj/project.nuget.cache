@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VF7DSwLw6vytifGNi49W93RhUjefojG7/EqZQTaPBE0158KVVufU8Eoo4OH2BI53V76tS6n1J/a2+4Uw3maJEw==",
+  "dgSpecHash": "WIY/Z8c/M0rGGcU70gR3CEj49Gb4DCToc63CYysxJFoiZZxDAssaCwPzLRRthGy5FEE3MuKfJfv8c2DjCDbrdg==",
   "success": true,
-  "projectFilePath": "D:\\1-Programming\\12-Dot-Net-MVC\\1-AdminDashboard\\New folder\\AdminDashboard\\AdminDashboardBLL\\AdminDashboardBLL.csproj",
+  "projectFilePath": "D:\\1-Programming\\12-Dot-Net-MVC\\1-AdminDashboard\\GitHub\\AdminDashboard\\AdminDashboardBLL\\AdminDashboardBLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
