@@ -18,7 +18,7 @@ namespace AdminDashboardBLL.Feature.Repository
         {
             _context = context;
         }
-       
+
         public async Task<IEnumerable<Employee>> GetAllAsync(Expression<Func<Employee, bool>> filter)
         {
             if (filter == null)
@@ -31,6 +31,11 @@ namespace AdminDashboardBLL.Feature.Repository
 
         public async Task<Employee> GetByIdAsync(Expression<Func<Employee, bool>> filter)
         {
+
+            if (filter == null)
+            {
+                return await _context.Employees.Include(e => e.Department).FirstOrDefaultAsync();
+            }
             var employee = await _context.Employees.Where(filter).Include(e => e.Department).FirstOrDefaultAsync();
             return employee;
         }

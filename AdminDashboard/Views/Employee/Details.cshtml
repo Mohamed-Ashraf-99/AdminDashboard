@@ -1,0 +1,70 @@
+﻿@using AdminDashboardBLL.ViewModels
+
+@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+
+<div class="block-header">
+    <h2>Employee Details</h2>
+</div>
+
+
+
+<label asp-for="FirstName">First Name</label>
+<input type="text" class="form-control" asp-for="FirstName" value="@Model.FirstName" readonly />
+<br />
+
+<label asp-for="LastName">Last Name</label>
+<input type="text" class="form-control" asp-for="LastName" value="@Model.LastName" readonly />
+<br />
+
+<label asp-for="Salary">Salary</label>
+<input type="text" class="form-control" asp-for="Salary" value="@Model.Salary" readonly />
+<br />
+
+<label asp-for="Address">Address</label>
+<input type="text" class="form-control" asp-for="Address" value="@Model.Address" readonly />
+<br />
+
+<label asp-for="Email">Email</label>
+<input type="text" class="form-control" asp-for="Email" value="@Model.Email" readonly />
+<br />
+
+<label asp-for="Phone">Phone</label>
+<input type="text" class="form-control" asp-for="Phone" value="@Model.Phone" readonly />
+<br />
+
+<label asp-for="Notes">Notes</label>
+<input class="form-control" asp-for="Notes" value="@Model.Notes" readonly />
+<br />
+
+<label asp-for="HireDate">Hire Date</label>
+<input type="date" class="form-control" asp-for="HireDate" value="@Model.HireDate.ToString("yyyy-MM-dd")" readonly />
+<br />
+
+<label asp-for="Department.Name">Department</label>
+<input class="form-control" asp-for="Department.Name" value="@Model.Department.Name" readonly />
+
+
+<br />
+<br />
+<br />
+
+<center>
+    <a asp-action="Edit" asp-controller="Employee" asp-route-id="@Model.Id" class="btn btn-danger">Update</a>
+    <a asp-action="Delete" asp-controller="Employee" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    <a asp-action="Index" asp-controller="Employee" class="btn btn-danger">Back</a>
+</center>
+
+
+@section JqueryValidation {
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}

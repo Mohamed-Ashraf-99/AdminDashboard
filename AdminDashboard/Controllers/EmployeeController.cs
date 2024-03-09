@@ -32,7 +32,7 @@ namespace AdminDashboard.Controllers
 
         public async Task<IActionResult> Details(int id)
         {
-            var employee = await _employeeRepository.GetByIdAsync(e => e.Id == id  && e.IsDeleted);
+            var employee = await _employeeRepository.GetByIdAsync(e => e.Id == id  && e.IsDeleted == false);
             var employeeVm = _mapper.Map<EmployeeViewModel>(employee);
             return View(employeeVm);
         }
@@ -67,10 +67,12 @@ namespace AdminDashboard.Controllers
             }
         }
 
+        [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var employee = await _employeeRepository.GetByIdAsync(e => e.Id == id  && e.IsDeleted);
+            var employee = await _employeeRepository.GetByIdAsync(e => e.Id == id  && e.IsDeleted == false);
             var employeeViewModel = _mapper.Map<EmployeeViewModel>(employee);
+            employeeViewModel.DepartmentsList = await _departmentRepository.GetAllAsync();
             return View(employeeViewModel);
         }
 
@@ -89,14 +91,18 @@ namespace AdminDashboard.Controllers
             }
             catch
             {
+                employeeViewModel.DepartmentsList = await _departmentRepository.GetAllAsync();
                 return View(employeeViewModel);
             }
         }
 
         public async Task<IActionResult> Delete(int id)
         {
-            var employee = await _employeeRepository.GetByIdAsync(e => e.Id == id && e.IsActive == true && e.IsDeleted);
+            var employee = await _employeeRepository.GetByIdAsync(e => e.Id == id && e.IsDeleted == false);
             var employeeViewModel = _mapper.Map<EmployeeViewModel>(employee);
+
+            employeeViewModel.DepartmentsList = await _departmentRepository.GetAllAsync();
+
             return View(employeeViewModel);
         }
 
@@ -115,6 +121,8 @@ namespace AdminDashboard.Controllers
             }
             catch
             {
+                employeeViewModel.DepartmentsList = await _departmentRepository.GetAllAsync();
+
                 return View(employeeViewModel);
             }
         }
