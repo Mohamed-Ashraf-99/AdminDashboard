@@ -26,8 +26,9 @@ namespace DashboardPL
 
             //Add Scoped
             builder.Services.AddScoped<IDepartment, DepartmentRepository>();
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
-            // Enhancement ConnectionString
+            //ConnectionString
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>

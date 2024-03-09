@@ -4,38 +4,47 @@ using AdminDashboardDAL.Entities;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AdminDashboard.Controllers
 {
     public class EmployeeController : Controller
     {
         readonly IEmployeeRepository _employeeRepository;
+        readonly IDepartment _departmentRepository;
         readonly IMapper _mapper;
 
-        public EmployeeController(IEmployeeRepository employeeRepository, IMapper mapper)
+        public EmployeeController(IEmployeeRepository employeeRepository, IMapper mapper, IDepartment departmentRepository)
         {
             _employeeRepository = employeeRepository;
             _mapper = mapper;
-        }
+            _departmentRepository = departmentRepository;
 
+        }
 
         public async Task<IActionResult> Index()
         {
-            //var employeeVMs = await _employeeRepository.GetAllAsync();
-            return View();
+            var employees = await _employeeRepository.GetAllAsync(e => e.IsDeleted == false);
+            var employeeViewModels = _mapper.Map<IEnumerable<EmployeeViewModel>>(employees);
+            return View(employeeViewModels);
         }
+
 
         public async Task<IActionResult> Details(int id)
         {
-            var employee = await _employeeRepository.GetByIdAsync(id);
+            var employee = await _employeeRepository.GetByIdAsync(e => e.Id == id  && e.IsDeleted);
             var employeeVm = _mapper.Map<EmployeeViewModel>(employee);
             return View(employeeVm);
         }
 
-        public ActionResult Create()
+  
+        public async Task<IActionResult> Create()
         {
-
-            return View();
+            var employeeVM = new EmployeeViewModel()
+            {
+                DepartmentsList = await _departmentRepository.GetAllAsync()          
+            };
+            return View(employeeVM);
         }
 
         [HttpPost]
@@ -53,13 +62,14 @@ namespace AdminDashboard.Controllers
             }
             catch
             {
+                employeeViewModel.DepartmentsList = await _departmentRepository.GetAllAsync();
                 return View(employeeViewModel);
             }
         }
 
         public async Task<IActionResult> Edit(int id)
         {
-            var employee = await _employeeRepository.GetByIdAsync(id);
+            var employee = await _employeeRepository.GetByIdAsync(e => e.Id == id  && e.IsDeleted);
             var employeeViewModel = _mapper.Map<EmployeeViewModel>(employee);
             return View(employeeViewModel);
         }
@@ -85,7 +95,7 @@ namespace AdminDashboard.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
-            var employee = _employeeRepository.GetByIdAsync(id);
+            var employee = await _employeeRepository.GetByIdAsync(e => e.Id == id && e.IsActive == true && e.IsDeleted);
             var employeeViewModel = _mapper.Map<EmployeeViewModel>(employee);
             return View(employeeViewModel);
         }

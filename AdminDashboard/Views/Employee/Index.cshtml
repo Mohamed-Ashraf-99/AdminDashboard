@@ -1,0 +1,69 @@
+﻿@model IEnumerable<EmployeeViewModel>
+@{
+    ViewData["Title"] = "Departments";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+<style>
+    tr {
+        text-align: center !important;
+    }
+</style>
+
+<h2>Employees</h2>
+
+<a asp-controller="Employee" asp-action="Create" class="btn btn-primary">Create New Employee</a>
+<table class="table table-hover table-striped text-center table-bordered fw-bold">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Salary</th>
+            <th>Hire Date</th>
+            <th>Department</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>
+                    @employee.Id
+                </td>
+                <td>
+                    @employee.FirstName
+                </td>
+                <td>
+                    @employee.LastName
+                </td>
+                <td>
+                    @employee.Salary
+                </td>
+
+                <td>
+                    @employee.HireDate.ToShortDateString()
+                </td>
+
+                <td>
+                    @employee.Department.Name
+                </td>
+
+
+                <td>
+                    <a asp-controller="Employee" asp-action="Details" asp-route-id="@employee.Id" class="btn btn-success">Details</a>
+                </td>
+
+                <td>
+                    <a asp-controller="Employee" asp-action="Edit" asp-route-id="@employee.Id" class="btn btn-warning">Edit</a>
+                </td>
+
+                <td>
+                    <a asp-controller="Employee" asp-action="Delete" asp-route-id="@employee.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -24,6 +24,9 @@
 
     <!-- Morris Chart Css-->
     <link href="~/plugins/morrisjs/morris.css" rel="stylesheet" />
+    
+    
+    <link href="~/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
 
     <!-- Custom Css -->
     <link href="~/css/style.css" rel="stylesheet">
@@ -323,6 +326,18 @@
                     </li>
 
 
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">swap_calls</i>
+                            <span>Employees</span>
+                        </a>
+
+                        <ul class="ml-menu">
+                            <li>
+                                <a asp-controller="Employee" asp-action="Index">Employees Card</a>
+                            </li>
+                        </ul>
+                    </li>
 
                 </ul>
             </div>

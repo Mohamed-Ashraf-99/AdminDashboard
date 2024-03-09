@@ -39,7 +39,7 @@ namespace AdminDashboardBLL.ViewModels
 
         public bool IsUpdated { get; set; }
 
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         public DateTime CreationDate { get; set; }
 
@@ -47,8 +47,9 @@ namespace AdminDashboardBLL.ViewModels
 
         public DateTime LastUpdatedDate { get; set; }
 
+        public IEnumerable<Department>? DepartmentsList { get; set; }
         public int DepartmentId { get; set; }
 
-        public virtual Department Department { get; set; }
+        public  Department? Department { get; set; }
     }
 }

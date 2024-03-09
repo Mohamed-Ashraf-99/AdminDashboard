@@ -18,19 +18,20 @@ namespace AdminDashboardBLL.Feature.Repository
         {
             _context = context;
         }
+       
         public async Task<IEnumerable<Employee>> GetAllAsync(Expression<Func<Employee, bool>> filter)
         {
             if (filter == null)
             {
-                return await _context.Employees.ToListAsync();
+                return await _context.Employees.Include(e => e.Department).ToListAsync();
             }
-            var employees = await _context.Employees.Where(filter).ToListAsync();
+            var employees = await _context.Employees.Where(filter).Include(e => e.Department).ToListAsync();
             return employees;
         }
 
-        public async Task<Employee> GetByIdAsync(int id)
+        public async Task<Employee> GetByIdAsync(Expression<Func<Employee, bool>> filter)
         {
-            var employee = await _context.Employees.FindAsync(id);
+            var employee = await _context.Employees.Where(filter).Include(e => e.Department).FirstOrDefaultAsync();
             return employee;
         }
 
@@ -42,7 +43,7 @@ namespace AdminDashboardBLL.Feature.Repository
 
         public async Task UpdateAsync(Employee employee)
         {
-            var oldEmployee = await _context.Employees.FindAsync(employee.Id);
+            employee.LastUpdatedDate = DateTime.Now;
             _context.Employees.Update(employee);
             await _context.SaveChangesAsync();
         }
@@ -50,11 +51,10 @@ namespace AdminDashboardBLL.Feature.Repository
         public async Task DeleteById(int id)
         {
             var employee = await _context.Employees.FindAsync(id);
-            _context.Employees.Remove(employee);
+            employee.IsDeleted = true;
+            employee.DeletedDate = DateTime.Now;
+            _context.Employees.Update(employee);
             await _context.SaveChangesAsync();
         }
-
-
-
     }
 }

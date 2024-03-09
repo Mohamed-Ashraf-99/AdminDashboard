@@ -1,0 +1,81 @@
+﻿@using AdminDashboardBLL.ViewModels
+
+@model EmployeeViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+
+<h1>Create</h1>
+
+
+<div class="block-header">
+    <h2>Create Department</h2>
+</div>
+
+<form asp-controller="Employee" asp-action="Create" class="form-group">
+
+    <label asp-for="FirstName">First Name</label>
+    <input type="text" class="form-control" asp-for="FirstName" />
+    <span asp-validation-for="FirstName" class="danger"></span>
+    <br />
+
+    <label asp-for="LastName">Last Name</label>
+    <input type="text" class="form-control" asp-for="LastName"  />
+    <span asp-validation-for="LastName" class="danger"></span>
+    <br />
+
+    <label asp-for="Salary">Salary</label>
+    <input type="text" class="form-control" asp-for="Salary" value=""/>
+    <span asp-validation-for="Salary" class="danger"></span>
+    <br />
+    
+    <label asp-for="Address">Address</label>
+    <input type="text" class="form-control" asp-for="Address"  />
+    <span asp-validation-for="Address" class="danger"></span>
+    <br />
+    
+    <label asp-for="Email">Email</label>
+    <input type="text" class="form-control" asp-for="Email"  />
+    <span asp-validation-for="Email" class="danger"></span>
+    <br />  
+    
+    <label asp-for="Phone">Phone</label>
+    <input type="text" class="form-control" asp-for="Phone"  />
+    <span asp-validation-for="Phone" class="danger"></span>
+    <br />
+
+    <label asp-for="Notes">Notes</label>
+    <input class="form-control" asp-for="Notes" />
+    <span asp-validation-for="Notes" class="danger"></span>
+    <br />
+    
+    <label asp-for="HireDate">Hire Date</label>
+    <input type="date" class="form-control" asp-for="HireDate" value="@DateTime.Now"/>
+    <span asp-validation-for="HireDate" class="danger"></span>
+    <br />
+
+    <label asp-for="DepartmentId">Department</label>
+    <select class="form-control" asp-for="DepartmentId">
+        <option>Choose Department</option>
+        @foreach (var department in Model.DepartmentsList)
+        {
+            <option value="@department.Id">@department.Name</option>
+        }
+    </select>
+    <br />
+    <br />
+    <br />
+    
+    <center>
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Index" asp-controller="Department" class="btn btn-danger">Cancel</a>
+    </center>
+</form> 
+
+@section JqueryValidation {
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}

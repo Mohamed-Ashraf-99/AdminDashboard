@@ -14,12 +14,14 @@
 <a asp-controller="Department" asp-action="Create" class="btn btn-primary">Create New Department</a>
 <table class="table table-hover table-striped text-center table-bordered fw-bold">
     <thead>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Code</th>
-    <th>Details</th> 
-    <th>Edit</th>
-    <th>Delete</th>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
     </thead>
     <tbody>
         @foreach (var department in Model)
@@ -35,7 +37,7 @@
                     <a asp-controller="Department" asp-action="Edit" asp-route-id="@department.Id" class="btn btn-warning">Edit</a>
                 </td>
                 <td>
-                    <a asp-controller="Department" asp-action="Delete" asp-route-id="@department.Id" class="btn btn-danger" >Delete</a>
+                    <a asp-controller="Department" asp-action="Delete" asp-route-id="@department.Id" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }

@@ -37,6 +37,9 @@ namespace AdminDashboardDAL.Configurations
             builder.Property(e => e.CreationDate)
                 .HasDefaultValueSql("GETDATE()");
 
+            builder.Property(e => e.IsActive)
+                .HasDefaultValue(true);
+
 
         }
     }

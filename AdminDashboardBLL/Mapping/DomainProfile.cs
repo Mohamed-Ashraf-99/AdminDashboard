@@ -20,10 +20,7 @@ namespace DashboardBLL.Mapping
             // From View Model To Entity (Create - Edit - Delete) 
             CreateMap<DepartmentVM, Department>();
 
-            // From Entity To View Model (Retrieve)
             CreateMap<Employee, EmployeeViewModel>();
-
-            // From View Model To Entity (Create - Edit - Delete) 
             CreateMap<EmployeeViewModel, Employee>();
         }
     }

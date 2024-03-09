@@ -12,7 +12,7 @@ namespace AdminDashboardBLL.Feature.Interface
     {
         Task<IEnumerable<Employee>> GetAllAsync(Expression<Func<Employee, bool>> filter);
 
-        Task<Employee> GetByIdAsync(int id);
+        Task<Employee> GetByIdAsync(Expression<Func<Employee, bool>> filter);
 
         Task CreateAsync(Employee employee);
 
