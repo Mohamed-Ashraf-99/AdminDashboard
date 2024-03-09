@@ -22,11 +22,21 @@ namespace AdminDashboard.Controllers
 
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string SearchValue)
         {
-            var employees = await _employeeRepository.GetAllAsync(e => e.IsDeleted == false);
-            var employeeViewModels = _mapper.Map<IEnumerable<EmployeeViewModel>>(employees);
-            return View(employeeViewModels);
+            if(SearchValue != null)
+            {
+                var employees = await _employeeRepository.SearchByNameAsync(e => e.FirstName.Contains(SearchValue) || e.LastName.Contains(SearchValue) && e.IsDeleted == false);
+                var employeeViewModels = _mapper.Map<IEnumerable<EmployeeViewModel>>(employees);
+                return View(employeeViewModels);
+            }
+            else
+            {
+                var employees = await _employeeRepository.GetAllAsync(e => e.IsDeleted == false);
+                var employeeViewModels = _mapper.Map<IEnumerable<EmployeeViewModel>>(employees);
+                return View(employeeViewModels);
+            }
+           
         }
 
 
@@ -85,6 +95,8 @@ namespace AdminDashboard.Controllers
                 if (ModelState.IsValid)
                 {
                     var employee = _mapper.Map<Employee>(employeeViewModel);
+                    employee.IsUpdated = true;
+                    employee.LastUpdatedDate = DateTime.Now;
                     await _employeeRepository.UpdateAsync(employee);
                 }
                 return RedirectToAction(nameof(Index));
@@ -115,6 +127,8 @@ namespace AdminDashboard.Controllers
                 if(ModelState.IsValid)
                 {
                     var employee = _mapper.Map<Employee>(employeeViewModel);
+                    employee.DeletedDate = DateTime.Now;
+                    employee.IsActive = false;
                     await _employeeRepository.DeleteById(employee.Id);
                 }
                 return RedirectToAction(nameof(Index));
@@ -126,5 +140,12 @@ namespace AdminDashboard.Controllers
                 return View(employeeViewModel);
             }
         }
+
+        //[HttpPost]
+        //public async Task<IActionResult> Search(string name)
+        //{
+
+        //    return RedirectToAction(name, nameof(Search));
+        //}
     }
 }

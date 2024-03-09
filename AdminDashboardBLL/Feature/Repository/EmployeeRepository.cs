@@ -61,5 +61,11 @@ namespace AdminDashboardBLL.Feature.Repository
             _context.Employees.Update(employee);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<Employee>> SearchByNameAsync(Expression<Func<Employee, bool>> filter)
+        {
+            var employees = await _context.Employees.Include(e => e.Department).Where(filter).ToListAsync();
+            return employees;
+        }
     }
 }

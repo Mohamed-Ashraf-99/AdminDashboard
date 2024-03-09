@@ -20,6 +20,6 @@ namespace AdminDashboardBLL.Feature.Interface
 
         Task DeleteById(int id);
 
-        //Task<Employee> GetByName(string name);
+        Task<IEnumerable<Employee>> SearchByNameAsync(Expression<Func<Employee, bool>> filter);
     }
 }
