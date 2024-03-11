@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdminDashboardDAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+413fb037082da2fb180321bd122d788684e1bd04")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86fc37bebc7e7bc90cdb9f823a0189e601f8727e")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdminDashboardDAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdminDashboardDAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,7 +13,7 @@ namespace AdminDashboardBLL.ViewModels
 
         [Required(ErrorMessage = "Name is required")]
         [StringLength(50,ErrorMessage = "Maximum Length 50")]
-        [MinLength(3,ErrorMessage = "Min Length 3")]
+        [MinLength(2,ErrorMessage = "Min Length 2")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Code is required")]

@@ -10,26 +10,25 @@ namespace Admin_Dashboard.Controllers
 {
     public class DepartmentController : Controller
     {
-        readonly IDepartment _department;
-
-        //Inject IMapper
+        readonly IUnitOfWork _genericRepository;
         readonly IMapper _mapper;
-        public DepartmentController(IDepartment department, IMapper mapper)
+        public DepartmentController(IMapper mapper, IUnitOfWork genericRepository)
         {
-            _department = department;
             _mapper = mapper;
+            _genericRepository = genericRepository;
+
         }
 
         public async Task<IActionResult> Index()
         {
-            var departments = await _department.GetAllAsync();
+            var departments = await _genericRepository.Department.GetAll();
             var departmentsVM = _mapper.Map<IEnumerable<DepartmentVM>>(departments);
             return View(departmentsVM);
         }
 
         public async Task<IActionResult> Details(int id)
         {
-            var department = await _department.GetByIdAsync(id);
+            var department = await _genericRepository.Department.GetById(id);
             var departmentVM = _mapper?.Map<DepartmentVM>(department);
             return View(departmentVM);
         }
@@ -51,7 +50,9 @@ namespace Admin_Dashboard.Controllers
                     //Mapping
                     var department = _mapper.Map<Department>(departmentVM);
                     //
-                    await _department.CreateAsync(department);
+                    await _genericRepository.Department.Add(department);
+                    await _genericRepository.Commit();
+
                     return RedirectToAction(nameof(Index));
                 }
 
@@ -67,7 +68,7 @@ namespace Admin_Dashboard.Controllers
 
         public async Task<IActionResult> Edit(int id)
         {
-            var department = await _department.GetByIdAsync(id);
+            var department = await _genericRepository.Department.GetById(id);
             var departmentVM = _mapper.Map<DepartmentVM>(department);
             return View(departmentVM);
         }
@@ -82,7 +83,9 @@ namespace Admin_Dashboard.Controllers
                 {
                     //Mapping
                     var department = _mapper.Map<Department>(departmentVM);
-                    await _department.UpdateAsync(department);
+                    await _genericRepository.Department.Update(department);
+                    await _genericRepository.Commit();
+
                     return RedirectToAction(nameof(Index));
                 }
                 return RedirectToAction(nameof(Index));
@@ -100,7 +103,10 @@ namespace Admin_Dashboard.Controllers
         {
             try
             {
-                await _department.DeleteAsync(id);
+                var department = await _genericRepository.Department.GetById(id);
+                await _genericRepository.Department.Delete(department);
+                await _genericRepository.Commit();
+
                 return RedirectToAction(nameof(Index));
             }
             catch

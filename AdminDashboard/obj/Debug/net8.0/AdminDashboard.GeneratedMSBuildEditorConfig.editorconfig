@@ -17,63 +17,63 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AdminDashboard
 build_property.RootNamespace = AdminDashboard
-build_property.ProjectDir = D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboard\
+build_property.ProjectDir = D:\1-Programming\11-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboard\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboard
+build_property.MSBuildProjectDirectory = D:\1-Programming\11-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboard
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Department/Create.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Department/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Department/Details.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Department/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Department/Edit.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Department/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Department/Index.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Department/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Create.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Delete.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Details.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Edit.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Index.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Home/Index.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Layout/MainLayout.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/Layout/MainLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0XE1haW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/_ViewImports.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/1-Programming/12-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/_ViewStart.cshtml]
+[D:/1-Programming/11-Dot-Net-MVC/1-AdminDashboard/GitHub/AdminDashboard/AdminDashboard/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kmsRASBquDtp/3rgzBZREHYj3sPMfMIMUEK+83qTQeZ4jAhvyghqzs4ui6ejLdlVfgvb9kIW5rxF2RTq/MHdiA==",
+  "dgSpecHash": "2ciOWSqhHZG64PWWoQTRd/K7iBHj4pErdj7amS9KOZKaxIaNtALSzuEdULypqfaPXxPMU3gcaVJTJnNGQnMnTw==",
   "success": true,
-  "projectFilePath": "D:\\1-Programming\\12-Dot-Net-MVC\\1-AdminDashboard\\GitHub\\AdminDashboard\\AdminDashboard\\AdminDashboard.csproj",
+  "projectFilePath": "D:\\1-Programming\\11-Dot-Net-MVC\\1-AdminDashboard\\GitHub\\AdminDashboard\\AdminDashboard\\AdminDashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

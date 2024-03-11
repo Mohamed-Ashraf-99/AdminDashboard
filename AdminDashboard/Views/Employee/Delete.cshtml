@@ -15,6 +15,9 @@
 
 <form asp-controller="Employee" asp-action="Delete" class="form-group">
 
+    <input type="hidden" class="form-control" asp-for="Id"/>
+
+
     <label asp-for="FirstName">First Name</label>
     <input type="text" class="form-control" asp-for="FirstName" value="@Model.FirstName" readonly />
     <br />
@@ -42,10 +45,12 @@
     <label asp-for="Notes">Notes</label>
     <input class="form-control" asp-for="Notes" value="@Model.Notes" readonly />
     <br />
-
+    
 
     <label >Department</label>
-    <input class="form-control"  value="@Model.Department.Name" readonly />
+    <input class="form-control" asp-for="Department.Name"   readonly />
+    <input type="hidden" class="form-control" asp-for="Department.Id"   readonly />
+    <input type="hidden" class="form-control" asp-for="Department.Code" readonly />
    
 
 

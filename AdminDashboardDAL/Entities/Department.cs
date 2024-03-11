@@ -19,7 +19,7 @@ namespace AdminDashboardDAL.Entities
         [Required]
         public int Code { get; set;}
 
-        public List<Employee> Employees { get;}
+        public List<Employee>? Employees { get;}
 
     }
 }

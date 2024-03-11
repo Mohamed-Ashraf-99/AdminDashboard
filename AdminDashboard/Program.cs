@@ -25,8 +25,8 @@ namespace DashboardPL
 
 
             //Add Scoped
-            builder.Services.AddScoped<IDepartment, DepartmentRepository>();
-            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            builder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
+            builder.Services.AddScoped(typeof(IUnitOfWork),typeof(UnitOfWorkRepository));
 
             //ConnectionString
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

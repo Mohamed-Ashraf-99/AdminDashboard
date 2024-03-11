@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AdminDashboardBLL
-build_property.ProjectDir = D:\1-Programming\12-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboardBLL\
+build_property.ProjectDir = D:\1-Programming\11-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboardBLL\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
