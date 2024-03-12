@@ -25,14 +25,16 @@ namespace DashboardPL
 
 
             //Add Scoped
-            builder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
-            builder.Services.AddScoped(typeof(IUnitOfWork),typeof(UnitOfWorkRepository));
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWorkRepository));
 
             //ConnectionString
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(connectionString));
+            builder.Services
+                .AddDbContext<ApplicationDbContext>(options =>
+            options
+            .UseSqlServer(connectionString));
 
 
             var app = builder.Build();

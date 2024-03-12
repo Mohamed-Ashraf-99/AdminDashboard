@@ -132,7 +132,7 @@ namespace AdminDashboard.Controllers
                     
                     await _genericRepository.Employee.Delete(employee);
                     await _genericRepository.Commit();
-
+ 
                 }
                 return RedirectToAction(nameof(Index));
             }

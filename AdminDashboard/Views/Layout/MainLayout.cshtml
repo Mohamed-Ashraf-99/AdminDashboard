@@ -16,6 +16,10 @@
     <!-- Bootstrap Core Css -->
     <link href="~/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
+    <link href="~/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+    @RenderSection("DataTable", required: false)
+
     <!-- Waves Effect Css -->
     <link href="~/plugins/node-waves/waves.css" rel="stylesheet" />
 
@@ -24,9 +28,8 @@
 
     <!-- Morris Chart Css-->
     <link href="~/plugins/morrisjs/morris.css" rel="stylesheet" />
-    
-    
-    <link href="~/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+
 
     <!-- Custom Css -->
     <link href="~/css/style.css" rel="stylesheet">
@@ -518,7 +521,7 @@
 
     <!-- Select Plugin Js -->
     <script src="~/plugins/bootstrap-select/js/bootstrap-select.js"></script>
-
+    @RenderSection("JqueryDataTable", required: false)
     <!-- Slimscroll Plugin Js -->
     <script src="~/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 

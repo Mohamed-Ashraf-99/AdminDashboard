@@ -667,3 +667,5 @@ D:\1-Programming\11-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDash
 D:\1-Programming\11-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboard\obj\Debug\net8.0\AdminDashboard.pdb
 D:\1-Programming\11-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboard\obj\Debug\net8.0\AdminDashboard.genruntimeconfig.cache
 D:\1-Programming\11-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboard\obj\Debug\net8.0\ref\AdminDashboard.dll
+D:\1-Programming\11-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboard\bin\Debug\net8.0\Castle.Core.dll
+D:\1-Programming\11-Dot-Net-MVC\1-AdminDashboard\GitHub\AdminDashboard\AdminDashboard\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
